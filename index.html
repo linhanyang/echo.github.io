@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Echo's Blog, React Native, Javascript, Redux..." />
 
 
 
@@ -60,7 +60,7 @@
 <meta name="description" content="热爱编程，追求卓越">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Echo's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://linhanyang.github.io/index.html">
 <meta property="og:site_name" content="Echo's Blog">
 <meta property="og:description" content="热爱编程，追求卓越">
 <meta name="twitter:card" content="summary">
@@ -184,6 +184,111 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/20/React-Native组件架构设计之Redux/" itemprop="url">
+                  React Native组件架构设计之Redux
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-20T15:48:16+08:00" content="2016-03-20">
+              2016-03-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Redux</strong>目前使用比较多的React Native组件服务架构。</p>
+<p><img src="/images/redux-schemee.png" alt="架构示意图" title="架构示意图"></p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>分层设计，职责清晰；</li>
+<li>要求store reducer都是页面单例，易于管理；</li>
+<li>action为请求dto对象，是请求类型，请求数据的载体；</li>
+<li>reducer是处理请求的方法。不允许有状态，必须是纯方法。必须严格遵守输入输出，中间不允许有异步调用。不允许对state直接进行修改，要想修改必须返回新对象；</li>
+<li>store<ul>
+<li>维持应用的state；</li>
+<li>提供 getState() 方法获取 state；</li>
+<li>提供 dispatch(action) 方法分发请求来更新 state；门面模式，要求所有的请求满足统一的格式【可以进行路由、监控、日志等】，统一的调用方式；</li>
+<li>通过 subscribe(listener) 注册监听器监听state的变化。</li>
+</ul>
+</li>
+<li>文档非常详细，从设计到开发都有。</li>
+</ul>
+<p>相关使用案例参考<a href="/2016/03/20/React-Native-Redux示例/">React Native + Redux示例</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -421,7 +526,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
@@ -431,7 +536,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

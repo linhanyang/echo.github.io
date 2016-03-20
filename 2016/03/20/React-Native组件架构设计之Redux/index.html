@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Javascript," />
+  <meta name="keywords" content="React Native,Javascript,Redux," />
 
 
 
@@ -57,22 +57,42 @@
 
 
 
-<meta name="description" content="Immutable.js是什么？Immutable Data是指一旦被创造后，就不可以被改变的数据。通过使用Immutable Data，可以让我们更容易的去处理缓存、回退、数据变化检测等问题，简化我们的开发。
-Immutable.js为我们提供了许多不可变的数据结构，如： List，Stack， Map， OrderedMap， Set， OrderedSet 和 Record。
-开始使用使用N">
+<meta name="description" content="Redux目前使用比较多的React Native组件服务架构。
+
+特性
+分层设计，职责清晰；
+要求store reducer都是页面单例，易于管理；
+action为请求dto对象，是请求类型，请求数据的载体；
+reducer是处理请求的方法。不允许有状态，必须是纯方法。必须严格遵守输入输出，中间不允许有异步调用。不允许对state直接进行修改，要想修改必须返回新对象；
+store
+维持应用的st">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Immutable.js">
-<meta property="og:url" content="http://linhanyang.github.io/2016/03/19/immutable.js/index.html">
+<meta property="og:title" content="React Native组件架构设计之Redux">
+<meta property="og:url" content="http://linhanyang.github.io/2016/03/20/React-Native组件架构设计之Redux/index.html">
 <meta property="og:site_name" content="Echo's Blog">
-<meta property="og:description" content="Immutable.js是什么？Immutable Data是指一旦被创造后，就不可以被改变的数据。通过使用Immutable Data，可以让我们更容易的去处理缓存、回退、数据变化检测等问题，简化我们的开发。
-Immutable.js为我们提供了许多不可变的数据结构，如： List，Stack， Map， OrderedMap， Set， OrderedSet 和 Record。
-开始使用使用N">
-<meta property="og:updated_time" content="2016-03-20T08:59:40.000Z">
+<meta property="og:description" content="Redux目前使用比较多的React Native组件服务架构。
+
+特性
+分层设计，职责清晰；
+要求store reducer都是页面单例，易于管理；
+action为请求dto对象，是请求类型，请求数据的载体；
+reducer是处理请求的方法。不允许有状态，必须是纯方法。必须严格遵守输入输出，中间不允许有异步调用。不允许对state直接进行修改，要想修改必须返回新对象；
+store
+维持应用的st">
+<meta property="og:image" content="http://linhanyang.github.io/images/redux-schemee.png">
+<meta property="og:updated_time" content="2016-03-20T09:01:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Immutable.js">
-<meta name="twitter:description" content="Immutable.js是什么？Immutable Data是指一旦被创造后，就不可以被改变的数据。通过使用Immutable Data，可以让我们更容易的去处理缓存、回退、数据变化检测等问题，简化我们的开发。
-Immutable.js为我们提供了许多不可变的数据结构，如： List，Stack， Map， OrderedMap， Set， OrderedSet 和 Record。
-开始使用使用N">
+<meta name="twitter:title" content="React Native组件架构设计之Redux">
+<meta name="twitter:description" content="Redux目前使用比较多的React Native组件服务架构。
+
+特性
+分层设计，职责清晰；
+要求store reducer都是页面单例，易于管理；
+action为请求dto对象，是请求类型，请求数据的载体；
+reducer是处理请求的方法。不允许有状态，必须是纯方法。必须严格遵守输入输出，中间不允许有异步调用。不允许对state直接进行修改，要想修改必须返回新对象；
+store
+维持应用的st">
+<meta name="twitter:image" content="http://linhanyang.github.io/images/redux-schemee.png">
 
 
 
@@ -90,7 +110,7 @@ Immutable.js为我们提供了许多不可变的数据结构，如： List，Sta
   };
 </script>
 
-  <title> Immutable.js | Echo's Blog </title>
+  <title> React Native组件架构设计之Redux | Echo's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -210,7 +230,7 @@ Immutable.js为我们提供了许多不可变的数据结构，如： List，Sta
             
             
               
-                Immutable.js
+                React Native组件架构设计之Redux
               
             
           </h1>
@@ -222,8 +242,8 @@ Immutable.js为我们提供了许多不可变的数据结构，如： List，Sta
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-03-19T23:51:53+08:00" content="2016-03-19">
-              2016-03-19
+            <time itemprop="dateCreated" datetime="2016-03-20T15:48:16+08:00" content="2016-03-20">
+              2016-03-20
             </time>
           </span>
 
@@ -249,12 +269,23 @@ Immutable.js为我们提供了许多不可变的数据结构，如： List，Sta
       
 
       
-        <h2 id="Immutable-js是什么？"><a href="#Immutable-js是什么？" class="headerlink" title="Immutable.js是什么？"></a>Immutable.js是什么？</h2><p>Immutable Data是指一旦被创造后，就不可以被改变的数据。<br>通过使用Immutable Data，可以让我们更容易的去处理缓存、回退、数据变化检测等问题，简化我们的开发。</p>
-<p>Immutable.js为我们提供了许多不可变的数据结构，如： <code>List</code>，<code>Stack</code>， <code>Map</code>， <code>OrderedMap</code>， <code>Set</code>， <code>OrderedSet</code> 和 <code>Record</code>。</p>
-<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>使用NPM进行Immutable.js安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install immutable</span><br></pre></td></tr></table></figure></p>
-<p>然后就可以直接引入到你项目中的任何模块进行使用了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Immutable = <span class="built_in">require</span>(<span class="string">'immutable'</span>);</span><br><span class="line"><span class="keyword">var</span> map1 = Immutable.Map(&#123;a:<span class="number">1</span>, b:<span class="number">2</span>, c:<span class="number">3</span>&#125;);</span><br><span class="line"><span class="keyword">var</span> map2 = map1.set(<span class="string">'b'</span>, <span class="number">50</span>);</span><br><span class="line">map1.get(<span class="string">'b'</span>); <span class="comment">// 2</span></span><br><span class="line">map2.get(<span class="string">'b'</span>); <span class="comment">// 50</span></span><br></pre></td></tr></table></figure></p>
-<p>目前我们在React Native项目中使用它来操作 <code>state</code>。</p>
-<p>详细API请参考：<a href="http://facebook.github.io/immutable-js/" target="_blank" rel="external">http://facebook.github.io/immutable-js/</a></p>
+        <p><strong>Redux</strong>目前使用比较多的React Native组件服务架构。</p>
+<p><img src="/images/redux-schemee.png" alt="架构示意图" title="架构示意图"></p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>分层设计，职责清晰；</li>
+<li>要求store reducer都是页面单例，易于管理；</li>
+<li>action为请求dto对象，是请求类型，请求数据的载体；</li>
+<li>reducer是处理请求的方法。不允许有状态，必须是纯方法。必须严格遵守输入输出，中间不允许有异步调用。不允许对state直接进行修改，要想修改必须返回新对象；</li>
+<li>store<ul>
+<li>维持应用的state；</li>
+<li>提供 getState() 方法获取 state；</li>
+<li>提供 dispatch(action) 方法分发请求来更新 state；门面模式，要求所有的请求满足统一的格式【可以进行路由、监控、日志等】，统一的调用方式；</li>
+<li>通过 subscribe(listener) 注册监听器监听state的变化。</li>
+</ul>
+</li>
+<li>文档非常详细，从设计到开发都有。</li>
+</ul>
+<p>相关使用案例参考<a href="/2016/03/20/React-Native-Redux示例/">React Native + Redux示例</a></p>
 
       
     </div>
@@ -269,7 +300,11 @@ Immutable.js为我们提供了许多不可变的数据结构，如： List，Sta
       
         <div class="post-tags">
           
+            <a href="/tags/React-Native/" rel="tag">#React Native</a>
+          
             <a href="/tags/Javascript/" rel="tag">#Javascript</a>
+          
+            <a href="/tags/Redux/" rel="tag">#Redux</a>
           
         </div>
       
@@ -278,13 +313,13 @@ Immutable.js为我们提供了许多不可变的数据结构，如： List，Sta
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/20/React-Native-Redux示例/" rel="next" title="React Native + Redux示例">
+                <i class="fa fa-chevron-left"></i> React Native + Redux示例
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/03/20/React-Native-Redux示例/" rel="prev" title="React Native + Redux示例">
-                React Native + Redux示例 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -396,7 +431,7 @@ Immutable.js为我们提供了许多不可变的数据结构，如： List，Sta
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Immutable-js是什么？"><span class="nav-number">1.</span> <span class="nav-text">Immutable.js是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始使用"><span class="nav-number">2.</span> <span class="nav-text">开始使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">1.</span> <span class="nav-text">特性</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
