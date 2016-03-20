@@ -1,0 +1,566 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="热爱编程，追求卓越">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Echo's Blog">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Echo's Blog">
+<meta property="og:description" content="热爱编程，追求卓越">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Echo's Blog">
+<meta name="twitter:description" content="热爱编程，追求卓越">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+  <title> Echo's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Echo's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">To be, or not to be.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/20/React-Native-Redux示例/" itemprop="url">
+                  React Native + Redux示例
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-20T00:48:57+08:00" content="2016-03-20">
+              2016-03-20
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本文主要介绍React Native和Redux搭配使用的案例。</p>
+<h2 id="为何选择Redux"><a href="#为何选择Redux" class="headerlink" title="为何选择Redux"></a>为何选择Redux</h2><p>由于应用当中的 <code>state</code> 日趋庞大繁多，对其操作管理混乱不堪，为了寻求统一的管理 <code>state</code> 方法，Redux就应运而生了。<br>Redux 试图让 <code>state</code> 的变化变得可预测。这些限制条件反映在 Redux 的三大原则中</p>
+<ul>
+<li>整个应用的 <code>state</code> 被储存在一棵 <code>object tree</code> 中，并且这个 <code>object tree</code> 只存在于唯一一个 <code>store</code> 中。</li>
+<li>惟一改变 <code>state</code> 的方法就是触发 <code>action</code>，<code>action</code> 是一个用于描述已发生事件的普通对象。</li>
+<li>为了描述 <code>action</code> 如何改变 <code>state tree</code> ，你需要编写 <code>reducers</code>。</li>
+</ul>
+<h3 id="项目目录结构："><a href="#项目目录结构：" class="headerlink" title="项目目录结构："></a>项目目录结构：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── android/</span><br><span class="line">├── ios/</span><br><span class="line">├── src/</span><br><span class="line">|   ├── actions/</span><br><span class="line">|   |   └── loading.actions.js</span><br><span class="line">|   ├── components/</span><br><span class="line">|   ├── containers/</span><br><span class="line">|   |   └── home.container.js</span><br><span class="line">|   ├── reducers/</span><br><span class="line">|   |   └── root.reducer.js</span><br><span class="line">|   └── app.js</span><br><span class="line">├── .flowconfig</span><br><span class="line">├── .gitignore</span><br><span class="line">├── .watchmanconfig</span><br><span class="line">├── README.md</span><br><span class="line">├── index.android.js</span><br><span class="line">├── index.ios.js</span><br><span class="line">└── package.json</span><br></pre></td></tr></table></figure>
+<h4 id="index-ios-js"><a href="#index-ios-js" class="headerlink" title="index.ios.js"></a>index.ios.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react-native'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;createStore, applyMiddleware &#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123;Provider&#125; <span class="keyword">from</span> <span class="string">'react-redux/native'</span>;</span><br><span class="line"><span class="keyword">import</span> rootReducer <span class="keyword">from</span> <span class="string">'./src/reducers/root.reducer'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./src/app'</span>;</span><br><span class="line"><span class="keyword">import</span> thunk <span class="keyword">from</span> <span class="string">'redux-thunk'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123;AppRegistry, Component&#125; = React; <span class="comment">// React Must be defined;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// create a store that has redux-thunk middleware enabled</span></span><br><span class="line"><span class="keyword">const</span> createStoreWithMiddleware = applyMiddleware(</span><br><span class="line">  thunk</span><br><span class="line">)(createStore);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Init Store with root reducer</span></span><br><span class="line"><span class="keyword">const</span> store = createStoreWithMiddleware(rootReducer);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">reactNativeTest</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Injects redux store to all children</span></span><br><span class="line">  render()&#123;</span><br><span class="line">    <span class="keyword">return</span>(</span><br><span class="line">      &lt;Provider store=&#123;store&#125;&gt;</span><br><span class="line">        &#123; () =&gt; &lt;App/&gt; &#125;</span><br><span class="line">      &lt;/Provider&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">AppRegistry.registerComponent(<span class="string">'reactNativeTest'</span>, () =&gt; reactNativeTest);</span><br></pre></td></tr></table></figure>
+<h4 id="root-reducer-js"><a href="#root-reducer-js" class="headerlink" title="root.reducer.js"></a>root.reducer.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;<span class="built_in">Map</span>, Seq, List,OrderedMap, Record&#125; <span class="keyword">from</span> <span class="string">'immutable'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> initialState = <span class="built_in">Map</span>(&#123;</span><br><span class="line">    loading: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">rootReducer</span>(<span class="params">state=initialState, action</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">switch</span> (action.type) &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="string">"SET_LOADING"</span>: &#123;</span><br><span class="line">            <span class="comment">// always need to return the new state</span></span><br><span class="line">            <span class="keyword">return</span> state.set(<span class="string">'loading'</span>, action.loading);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">return</span> state;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="loading-actions-js"><a href="#loading-actions-js" class="headerlink" title="loading.actions.js"></a>loading.actions.js</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">setLoading</span> (<span class="params">isLoading</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;type: <span class="string">"SET_LOADING"</span>, loading: isLoading&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h3 id="home-container-js"><a href="#home-container-js" class="headerlink" title="home.container.js"></a>home.container.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React, &#123;</span><br><span class="line">    Text,</span><br><span class="line">    View,</span><br><span class="line">    StyleSheet,</span><br><span class="line">    Component,</span><br><span class="line">    TouchableHighlight</span><br><span class="line">&#125; <span class="keyword">from</span> <span class="string">'react-native'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; bindActionCreators &#125; <span class="keyword">from</span> <span class="string">'redux'</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; connect &#125; <span class="keyword">from</span> <span class="string">'react-redux/native'</span>;</span><br><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> loadingActions <span class="keyword">from</span> <span class="string">'../actions/loading.actions'</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HomeContainer</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</span><br><span class="line">    componentDidMount() &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    render()&#123;</span><br><span class="line">        <span class="keyword">return</span>(</span><br><span class="line">            &lt;View style=&#123; styles.container&#125;&gt;</span><br><span class="line">                &lt;TouchableHighlight onPress=&#123; () =&gt; this.props.startLoading(true) &#125;&gt;</span><br><span class="line">                    &lt;Text&gt; &#123;this.props.loading ? "I AM LOADING!" : "DONE LOADING"&#125;&lt;/Text&gt;</span><br><span class="line">                &lt;/TouchableHighlight&gt;</span><br><span class="line">            &lt;/View&gt;</span><br><span class="line">        );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> styles = StyleSheet.create(&#123;</span><br><span class="line">    container: &#123;</span><br><span class="line">        flex:<span class="number">1</span>,</span><br><span class="line">        alignSelf: <span class="string">"stretch"</span>,</span><br><span class="line">        backgroundColor: <span class="string">'yellow'</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mapReduxStoreToProps = (reduxStore) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        loading: reduxStore.get(<span class="string">'loading'</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> mapDispatchToProps = (dispatch) =&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">        startLoading: bindActionCreators(loadingActions.setLoading, dispatch)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> connect(mapReduxStoreToProps, mapDispatchToProps)(HomeContainer);</span><br></pre></td></tr></table></figure>
+<p>完整示例：<a href="https://github.com/glockio/react-native-counter" target="_blank" rel="external">https://github.com/glockio/react-native-counter</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/19/immutable.js/" itemprop="url">
+                  Immutable.js
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-19T23:51:53+08:00" content="2016-03-19">
+              2016-03-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Immutable-js是什么？"><a href="#Immutable-js是什么？" class="headerlink" title="Immutable.js是什么？"></a>Immutable.js是什么？</h2><p>Immutable Data是指一旦被创造后，就不可以被改变的数据。<br>通过使用Immutable Data，可以让我们更容易的去处理缓存、回退、数据变化检测等问题，简化我们的开发。</p>
+<p>Immutable.js为我们提供了许多不可变的数据结构，如： <code>List</code>，<code>Stack</code>， <code>Map</code>， <code>OrderedMap</code>， <code>Set</code>， <code>OrderedSet</code> 和 <code>Record</code>。</p>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>使用NPM进行Immutable.js安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install immutable</span><br></pre></td></tr></table></figure></p>
+<p>然后就可以直接引入到你项目中的任何模块进行使用了<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Immutable = <span class="built_in">require</span>(<span class="string">'immutable'</span>);</span><br><span class="line"><span class="keyword">var</span> map1 = Immutable.Map(&#123;a:<span class="number">1</span>, b:<span class="number">2</span>, c:<span class="number">3</span>&#125;);</span><br><span class="line"><span class="keyword">var</span> map2 = map1.set(<span class="string">'b'</span>, <span class="number">50</span>);</span><br><span class="line">map1.get(<span class="string">'b'</span>); <span class="comment">// 2</span></span><br><span class="line">map2.get(<span class="string">'b'</span>); <span class="comment">// 50</span></span><br></pre></td></tr></table></figure></p>
+<p>目前我们在React Native项目中使用它来操作 <code>state</code>。</p>
+<p>详细API请参考：<a href="http://facebook.github.io/immutable-js/" target="_blank" rel="external">http://facebook.github.io/immutable-js/</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="Lin Hanyang" />
+          <p class="site-author-name" itemprop="name">Lin Hanyang</p>
+          <p class="site-description motion-element" itemprop="description">热爱编程，追求卓越</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lin Hanyang</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+
+</body>
+</html>
